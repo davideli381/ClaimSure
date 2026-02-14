@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ClaimSure - Consult & Advisory Firm</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Premium Enhancements Stylesheet -->
+    <style>
+        /* ==================== PREMIUM ANIMATIONS & TRANSITIONS ==================== */
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Premium Timing Functions */
+        :root {
+            --premium-ease: cubic-bezier(0.4, 0.0, 0.2, 1);
+            --premium-ease-in: cubic-bezier(0.4, 0.0, 1, 1);
+            --premium-ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+            --wine-primary: #3bbc1b;
+            --wine-dark: #342f96;
+            --grey-light: #f8f9fa;
+            --grey-medium: #6c757d;
+        }
+
+        /* ==================== STICKY NAVBAR ENHANCEMENTS ==================== */
+        
+        .navbar {
+            transition: all 0.6s var(--premium-ease);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: white !important;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-nav .nav-link {
+            position: relative;
+            transition: all 0.4s var(--premium-ease);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--wine-primary);
+            transition: all 0.4s var(--premium-ease);
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 80%;
+        }
+
+        /* ==================== HERO CAROUSEL ENHANCEMENTS ==================== */
+        
+        .carousel-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            animation: slowZoom 20s ease-out infinite alternate;
+            transform-origin: center center;
+        }
+
+        @keyframes slowZoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .carousel-caption h5 {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeSlideUp 1s var(--premium-ease) 0.3s forwards;
+        }
+
+        .carousel-caption h1 {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeSlideUp 1s var(--premium-ease) 0.6s forwards;
+        }
+
+        .carousel-caption .btn {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeSlideUp 1s var(--premium-ease) 0.9s forwards;
+        }
+
+        @keyframes fadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ==================== PREMIUM BUTTON ENHANCEMENTS ==================== */
+        
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s var(--premium-ease);
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s var(--premium-ease), height 0.6s var(--premium-ease);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--wine-primary) 0%, var(--wine-dark) 100%);
+            border: none;
+            box-shadow: 0 4px 15px rgba(114, 47, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(114, 47, 55, 0.4);
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            background: transparent;
+            transition: all 0.5s var(--premium-ease);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--wine-primary) !important;
+            transform: translateY(-3px);
+        }
+
+        /* ==================== SERVICE CARDS ENHANCEMENTS ==================== */
+        
+        .service-item {
+            transition: all 0.6s var(--premium-ease);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-item .rounded-circle {
+            transition: all 0.6s var(--premium-ease);
+        }
+
+        .service-item:hover .rounded-circle {
+            transform: rotateY(360deg) scale(1.1);
+            background: var(--wine-primary) !important;
+        }
+
+        .service-item i {
+            transition: all 0.6s var(--premium-ease);
+        }
+
+        .service-item:hover i {
+            animation: iconBounce 0.8s ease;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ==================== TEAM CARDS ENHANCEMENTS ==================== */
+        
+        .team-item {
+            border-radius: 10px;
+            transition: all 0.6s var(--premium-ease);
+            cursor: pointer;
+        }
+
+        .team-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-item img {
+            transition: all 0.8s var(--premium-ease);
+        }
+
+        .team-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .team-text {
+            transition: all 0.6s var(--premium-ease);
+        }
+
+        .team-item:hover .team-text {
+            transform: translateY(-20px);
+            background: var(--wine-primary) !important;
+        }
+
+        /* ==================== FEATURES SECTION ENHANCEMENTS ==================== */
+        
+        .bg-primary.rounded-circle {
+            transition: all 0.6s var(--premium-ease);
+            background: var(--wine-primary) !important;
+        }
+
+        .col-lg-4 > .row > .col-12:hover .bg-primary.rounded-circle {
+            transform: scale(1.2) rotate(360deg);
+            box-shadow: 0 8px 25px rgba(114, 47, 55, 0.4);
+        }
+
+        /* ==================== BLOG CARDS ENHANCEMENTS ==================== */
+        
+        .blog-item {
+            transition: all 0.6s var(--premium-ease);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .blog-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-item img {
+            transition: all 0.8s var(--premium-ease);
+        }
+
+        .blog-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* ==================== BACK TO TOP BUTTON ==================== */
+        
+        .back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s var(--premium-ease);
+            background: var(--wine-primary) !important;
+            border: none;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(114, 47, 55, 0.4);
+        }
+
+        /* ==================== PARALLAX EFFECTS ==================== */
+        
+        .parallax-section {
+            position: relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* ==================== QUOTE FORM ENHANCEMENTS ==================== */
+        
+        .form-control, .form-select {
+            transition: all 0.4s var(--premium-ease);
+            border: 2px solid transparent;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--wine-primary);
+            box-shadow: 0 0 0 0.2rem rgba(114, 47, 55, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* ==================== TESTIMONIAL CAROUSEL ==================== */
+        
+        .testimonial-carousel .owl-item {
+            opacity: 0.6;
+            transform: scale(0.95);
+            transition: all 0.6s var(--premium-ease);
+        }
+
+        .testimonial-carousel .owl-item.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ==================== FOOTER ENHANCEMENTS ==================== */
+        
+        .bg-dark a {
+            transition: all 0.4s var(--premium-ease);
+        }
+
+        .bg-dark a:hover {
+            transform: translateX(8px);
+            color: var(--wine-primary) !important;
+        }
+
+        .btn-lg-square {
+            transition: all 0.5s var(--premium-ease);
+        }
+
+        .btn-lg-square:hover {
+            transform: translateY(-5px) rotate(360deg);
+            background: var(--wine-primary) !important;
+        }
+
+        /* ==================== SECTION DIVIDERS ==================== */
+        
+        hr {
+            transition: all 0.8s var(--premium-ease);
+            background: var(--wine-primary) !important;
+        }
+
+        /* ==================== LOADING ANIMATION ==================== */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            animation: fadeIn 0.8s var(--premium-ease);
+        }
+
+        /* ==================== TOPBAR COLOR REFINEMENT ==================== */
+        
+        .bg-primary {
+            background: var(--wine-primary) !important;
+        }
+
+        .text-primary {
+            color: var(--wine-primary) !important;
+        }
+
+        /* ==================== RESPONSIVE ENHANCEMENTS ==================== */
+        
+        @media (max-width: 991px) {
+            .carousel-item img {
+                animation: none;
+            }
+            
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body py-2 pe-3 border-end" href=""><small>FAQs</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Support</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Privacy</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Policy</small></a>
+                    <a class="text-body py-2 ps-3" href=""><small>Career</small></a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+233 54 492 9794</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo.jpeg" alt="ClaimSure Consult & Advisory Services Logo" class="img-fluid" style="max-height: 50px;">
+</a>
+
+
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Service</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="quote.html" class="dropdown-item">Quote Form</a>
+                        <a href="team.html" class="dropdown-item">The Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Insurance Claims Consultancy</h5>
+                            <h1 class="display-1 text-white mb-md-4">Win your insurance claims with confidence</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Insurance Claims Consultancy</h5>
+                            <h1 class="display-1 text-white mb-md-4">Take Our Help To Reach The Top Level</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
+                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="display-5 mb-4">Welcome To <span class="text-primary">CLAIMSURE COSULT & ADVISORY SERVICES</span></h1>
+                <h4 class="text-primary mb-4">Expert Guidance, Certain Claims</h4>
+                <p class="mb-4">ClaimSure Consult & Advisory Services was established to support policyholders through
+the complexities of the insurance claims process by offering expert guidance, proper
+documentation, and professional representation aimed at achieving fair and timely
+claim settlements.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                    <div class="d-flex text-white mb-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle me-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Insurance Claims Advisory</h3>
+                            <p class="mb-0">Policy interpretation and claims advisory</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-5" data-aos="fade-up" data-aos-delay="400">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle me-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-chart-line fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Claims Documentation & Preparation</h3>
+                            <p class="mb-0">Preparation of claim forms and supporting documents</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white" data-aos="fade-up" data-aos-delay="600">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle me-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-balance-scale fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Claims Negotiation & Support Settlement</h3>
+                            <p class="mb-0">Professional representation and settlement recommendations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up">
+            <h1 class="display-5 mb-0">What We Offer</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-user-tie fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Insurance Claims Advisory</h3>
+                    <p class="mb-0">Guidance on claims procedures and requirements</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-chart-pie fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Claims Documentation & Preparation</h3>
+                    <p class="mb-0">Preparation of claim forms and supporting documents</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-chart-line fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Claims Management & Risk Advisory
+</h3>
+                    <p class="mb-0">Claims management support for businesses</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-chart-area fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Claims Submission & Follow-Up
+</h3>
+                    <p class="mb-0"></p>Submission of claims to insurers, Continuous follow-up and progress monitoring</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-balance-scale fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Claims Negotiation & Settlement Support</h3>
+                    <p class="mb-0">Professional representation and settlement recommendations</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <i class="fa fa-house-damage fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">Claims Audit & Compliance Review</h3>
+                    <p class="mb-0">dentification of discrepancies and advisory corrections</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;" data-aos="fade-up">
+            <h1 class="display-5 mb-0">Why Choose ClaimSure Consult & Advisory Services</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12" data-aos="fade-right" data-aos-delay="100">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-cubes fs-4 text-white"></i>
+                        </div>
+                        <h3>Best In Industry</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-percent fs-4 text-white"></i>
+                        </div>
+                        <h3>99% Success Rate</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <div class="col-12" data-aos="fade-right" data-aos-delay="300">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award fs-4 text-white"></i>
+                        </div>
+                        <h3>Award Winning</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="zoom-in">
+                <div class="d-block bg-primary h-100 text-center">
+                    <img class="img-fluid" src="img/feature.jpg" alt="">
+                    <div class="p-4">
+                        <p class="text-white mb-4">Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
+                        <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12" data-aos="fade-left" data-aos-delay="100">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="far fa-smile-beam fs-4 text-white"></i>
+                        </div>
+                        <h3>100% Happy Client</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <div class="col-12" data-aos="fade-left" data-aos-delay="200">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4 text-white"></i>
+                        </div>
+                        <h3>Professional Advisors</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                    <div class="col-12" data-aos="fade-left" data-aos-delay="300">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-headset fs-4 text-white"></i>
+                        </div>
+                        <h3>24/7 Customer Support</h3>
+                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+    <!-- Quote Start -->
+    <div class="container-fluid bg-secondary px-0">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5" data-aos="fade-right">
+                <h1 class="display-5 mb-4">Request A Free Quote</h1>
+                <p class="mb-4">Kasd vero erat ea amet justo no stet, et elitr no dolore no elitr sea kasd et dolor diam tempor. Nonumy sed dolore no eirmod sit nonumy vero lorem amet stet diam at. Ea at lorem sed et, lorem et rebum ut eirmod gubergren, dolor ea duo diam justo dolor diam ipsum dolore stet stet elitr ut. Ipsum amet labore lorem lorem diam magna sea, eos sed dolore elitr.</p>
+                <form>
+                    <div class="row gx-3">
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="form-floating-1" placeholder="John Doe">
+                                <label for="form-floating-1">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="form-floating-2" placeholder="name@example.com">
+                                <label for="form-floating-2">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="Financial Consultancy">
+                                    <option selected>Financial Consultancy</option>
+                                    <option value="1">Strategy Consultancy</option>
+                                    <option value="2">Tax Consultancy</option>
+                                </select>
+                                <label for="floatingSelect">Select A Service</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary w-100 h-100" type="submit">Request A Quote</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6" style="min-height: 400px;" data-aos="fade-left">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="img/quote.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-secondary p-5">
+        <div class="row g-5">
+            <div class="col-12 text-center">
+                <h1 class="display-5 mb-4">Stay Update!!!</h1>
+                <form class="mx-auto" style="max-width: 600px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                        <button class="btn btn-dark px-4">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary p-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Quick Links</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Kumasi, Ghana</p>
+                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
+                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+233 54 492 9794</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Follow Us</h3>
+                <div class="d-flex">
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://"><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="https://">Claimsure Consult & Advisory Services</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://vantechdesign.com">VanTech Design</a></p>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Premium Enhancements JavaScript -->
+    <script>
+        // ==================== INITIALIZATION ====================
+        
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100,
+            delay: 50
+        });
+
+        // ==================== STICKY NAVBAR WITH SHRINK EFFECT ====================
+        
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+
+        // ==================== SMOOTH SCROLLING FOR ANCHOR LINKS ====================
+        
+        $('a[href^="#"]').on('click', function(e) {
+            var target = this.hash;
+            if (target !== '') {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top - 80
+                }, 800, 'swing');
+            }
+        });
+
+        // ==================== BACK TO TOP BUTTON ====================
+        
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').addClass('show');
+            } else {
+                $('.back-to-top').removeClass('show');
+            }
+        });
+
+        $('.back-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 800, 'swing');
+            return false;
+        });
+
+        // ==================== CAROUSEL ENHANCEMENTS ====================
+        
+        // Reset animations when carousel changes slides
+        $('#header-carousel').on('slide.bs.carousel', function() {
+            var $currentSlide = $(this).find('.carousel-item.active');
+            $currentSlide.find('h5, h1, .btn').css({
+                'animation': 'none'
+            });
+            
+            setTimeout(function() {
+                $currentSlide.find('h5, h1, .btn').css({
+                    'animation': ''
+                });
+            }, 10);
+        });
+
+        // ==================== TESTIMONIAL CAROUSEL SMOOTH TRANSITIONS ====================
+        
+        $('.testimonial-carousel').owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            center: true,
+            dots: true,
+            loop: true,
+            margin: 25,
+            nav: false,
+            navText: [
+                '<i class="bi bi-arrow-left"></i>',
+                '<i class="bi bi-arrow-right"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                }
+            }
+        });
+
+        // ==================== BUTTON RIPPLE EFFECT ====================
+        
+        $('.btn').on('click', function(e) {
+            var $this = $(this);
+            var $ripple = $('<span class="ripple"></span>');
+            var x = e.pageX - $this.offset().left;
+            var y = e.pageY - $this.offset().top;
+            
+            $ripple.css({
+                top: y + 'px',
+                left: x + 'px'
+            });
+            
+            $this.append($ripple);
+            
+            setTimeout(function() {
+                $ripple.remove();
+            }, 600);
+        });
+
+        // ==================== FORM FIELD ANIMATIONS ====================
+        
+        $('.form-control, .form-select').on('focus', function() {
+            $(this).parent().addClass('focused');
+        }).on('blur', function() {
+            if (!$(this).val()) {
+                $(this).parent().removeClass('focused');
+            }
+        });
+
+        // ==================== NAVBAR DROPDOWN HOVER EFFECT ====================
+        
+        $('.dropdown').hover(
+            function() {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+            },
+            function() {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+            }
+        );
+
+        // ==================== PRELOADER (Optional - Uncomment if needed) ====================
+        
+        /*
+        $(window).on('load', function() {
+            $('.preloader').fadeOut(800);
+        });
+        */
+
+        // ==================== COUNTER ANIMATION (for statistics if needed) ====================
+        
+        function animateCounter($element, start, end, duration) {
+            $({value: start}).animate({value: end}, {
+                duration: duration,
+                easing: 'swing',
+                step: function() {
+                    $element.text(Math.floor(this.value));
+                },
+                complete: function() {
+                    $element.text(end);
+                }
+            });
+        }
+
+        // Example usage (uncomment and adjust selectors if you add counters):
+        /*
+        var counterStarted = false;
+        $(window).scroll(function() {
+            var oTop = $('#counter-section').offset().top - window.innerHeight;
+            if (!counterStarted && $(window).scrollTop() > oTop) {
+                counterStarted = true;
+                animateCounter($('#counter1'), 0, 99, 2000);
+                animateCounter($('#counter2'), 0, 150, 2000);
+                animateCounter($('#counter3'), 0, 50, 2000);
+            }
+        });
+        */
+
+        // ==================== PARALLAX EFFECT (Subtle) ====================
+        
+        $(window).scroll(function() {
+            var scrolled = $(window).scrollTop();
+            $('.carousel-item.active img').css('transform', 'translateY(' + (scrolled * 0.3) + 'px) scale(1.1)');
+        });
+
+        // ==================== IMAGE LAZY LOADING ENHANCEMENT ====================
+        
+        $('img[data-src]').each(function() {
+            var $img = $(this);
+            var observer = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) {
+                    $img.attr('src', $img.data('src'));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(this);
+        });
+
+        // ==================== REFRESH AOS ON DYNAMIC CONTENT ====================
+        
+        // If you dynamically load content, refresh AOS
+        // AOS.refresh();
+
+    </script>
+
+    <!-- Additional CSS for Ripple Effect -->
+    <style>
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            width: 20px;
+            height: 20px;
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
